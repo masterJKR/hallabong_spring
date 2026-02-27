@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<header id="header"  th:fragment="header">
+	<nav id="nav" class="flex items-center">
+		<div class="logoBox w-1/6">
+			<img th:src="@{/image/chalogo.png} ">
+		</div>
+		<ul class="menuList flex">
+			<li class="menu"><a th:href="@{/}">HOME</a></li>
+			<li class="menu"><a href="">경매</a></li>	
+			<li class="menu"><a href="">예정</a></li>	
+			<li class="menu"><a href="">접수</a></li>				
+		</ul>
+		<div class="loginBox">
+			<a th:href="@{/signIn}">로그인</a>
+		</div>
+	</nav>
+</header>
+
+</html>

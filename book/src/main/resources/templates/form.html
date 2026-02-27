@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>form.html</title>
+</head>
+<body>
+	
+	<p th:text="${name}">th:text는 태그의 innerText속성사용</p>
+	<p th:utext="'<b>html</b>'"> </p>
+	<h2 >
+		타임리프의  변수 표현 방법 <br>
+		${}    ->  model 데이터  <br>
+		*{}    ->  form태그 내부 <br>
+		#{}    ->  메시지 <br>
+		@{}    ->  주소 표현 , href나 src 에 붙인다. <br>
+				
+	</h2>
+	<a th:href="@{/userlist}" > 회원</a>
+
+
+	<form th:object="${testInfo}" method="get" action="">
+	
+		<input type="text" th:field="*{address}">  <br>
+		<input type="number" th:field="*{jumin}">  <br>
+		<input type="email"  th:field="*{email}">  <br>
+		<button>저장</button>
+	</form>
+	
+	
+	<p th:if="${  age>=20   }" >청년</p>
+	<p th:unless="${ age>=20 }"> 중년 </p>
+
+	<p th:text="${ age>=20 ? '청년' : '중년'  }"></p>
+
+</body>
+</html>
+
+

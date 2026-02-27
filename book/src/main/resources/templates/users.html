@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>users.html</title>
+</head>
+<body>
+	
+	<table>
+		<tr>
+			<th>번호</th><th>아이디</th><th>주소</th>
+			<th>전화번호</th>
+		</tr>
+		<tr th:each=" d : ${data}">
+			<td th:text="${d.id}"></td>
+			<td th:text="${d.userId}"></td>
+			<td th:text="${d.address}"></td>
+			<td th:text="${d.tel}"></td>
+		</tr>
+	</table>
+	
+	
+</body>
+</html>
