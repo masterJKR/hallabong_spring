@@ -6,14 +6,20 @@
 		<div class="logoBox w-1/6">
 			<img th:src="@{/image/chalogo.png} ">
 		</div>
-		<ul class="menuList flex">
-			<li class="menu"><a th:href="@{/}">HOME</a></li>
-			<li class="menu"><a href="">경매</a></li>	
-			<li class="menu"><a href="">예정</a></li>	
-			<li class="menu"><a href="">접수</a></li>				
+		<ul class="menuList flex w-4/6 justify-between text-2xl font-bold">
+			<li class="menu py-[10px] px-[20px]">
+				<a th:href="@{/}" class="block w-full hover:bg-blue-600 hover:text-white">HOME</a>
+			</li>
+			<li class="menu  py-[10px] px-[20px]"><a href="">경매</a></li>	
+			<li class="menu  py-[10px] px-[20px]"><a href="">예정</a></li>	
+			<li class="menu py-[10px] px-[20px]"><a href="">접수</a></li>				
 		</ul>
-		<div class="loginBox">
-			<a th:href="@{/signIn}">로그인</a>
+		<div class="loginBox w-1/6 flex justify-center
+		             text-2xl">
+			<a th:href="@{/signIn}"
+				class="w-4/5 text-center bg-blue-600 
+				text-white py-2 rounded-lg"
+			>로그인</a>
 		</div>
 	</nav>
 </header>
