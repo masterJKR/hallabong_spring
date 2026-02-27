@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>차차장경매</title>
+
+<script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+<link rel="stylesheet" th:href="@{/css/default.css }">
+
+</head>
+<body>
+		
+	<div id="wrap" class="w-[1200px] mx-auto">
+		<div th:replace="~{fragments/header :: header}"></div>
+		
+		<main id="main" class="relative h-[70vh]">
+	<!-- 로그인 폼  -->
+	
+			<div class="w-[400px] absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
+				<form method="post" th:action="@{/singIn}" >
+					<div>
+						<input type="text" placeholder="아이디">
+						<p class="error"></p>
+					</div>
+					<div>
+						<input type="password" placeholder="비밀번호">
+						<p class="error"></p>
+					</div>
+					<div>
+						<button>LOGIN</button>
+					</div>
+				</form>
+				
+				<div>
+					<p><a href="">아이디/비밀번호찾기</a></p>
+					<p><a th:href="@{/signUp}">회원가입</a></p>
+				</div>
+				
+			</div>
+		
+		</main>
+		
+		<div th:replace="~{fragments/footer :: footer}"></div>
+	</div>
+
+</body>
+</html>
+
+<script>
+
+</script>	
+
